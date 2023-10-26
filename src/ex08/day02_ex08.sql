@@ -7,6 +7,6 @@ WITH name_and_pizza AS (SELECT name,
                        AND address = 'Moscow'
                       OR address = 'Samara')
 SELECT name
-FROM name_and_pizza nam
+FROM name_and_pizza
 WHERE pizza_name = 'mushroom pizza' OR pizza_name = 'pepperoni pizza'
 ORDER BY name DESC;

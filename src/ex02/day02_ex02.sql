@@ -12,9 +12,9 @@ WITH period AS (
                                 FULL OUTER JOIN period prd ON prd.pizzeria_id = zz.id
      )
 
-SELECT COALESCE(res.person_name, '-'),
+SELECT COALESCE(res.person_name, '-') AS person_name,
        res.visit_date,
-       COALESCE(res.pizzeria_name, '-')
+       COALESCE(res.pizzeria_name, '-') AS pizzeria_name
 FROM (SELECT p.name  person_name,
              ap.visit_date,
              ap.name pizzeria_name
